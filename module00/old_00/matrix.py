@@ -14,15 +14,19 @@ class Matrix:
         else:
             self.data = 0
             self.shape = 0
+
     def error(self):
         print("error")
+        exit()
         #raise TypeError("error")
+
     def printeo(self):
         print(self.shape)
         print(self.data)
+
     def __add__(self, m2):
         suma = []
-        if (type(m2) != Matrix or type(self.data) != Matrix):
+        if (type(m2) != Matrix or type(self.data) != list):
             self.error()
         else:
             if (self.shape != m2.shape):
@@ -35,7 +39,7 @@ class Matrix:
             return suma
     def __sub__(self, m2):
         resta = []
-        if (type(m2) != Matrix or type(self.data) != Matrix):
+        if (type(m2) != Matrix or type(self.data) != list):
             self.error()
         if (self.shape != m2.shape):
             self.error()
@@ -50,6 +54,32 @@ class Matrix:
     def __rsub__(self, m2):
         self.__sub__(m2)
 
+    def __truediv__(self, k):
+        if type(self.data) != list or type(k) != int:
+            self.error()
+        else:
+            div = []
+            for row in self.data:
+                neo_row = []
+                for e in row:
+                    neo_row.append(e / k)
+                div.append(neo_row)
+            return (div)
+
+    def __rtruediv__(self, k):
+        self.__truediv__(k)
+
+    def __mul__(self, v):
+        if (type(v) == Matrix):
+            if (self.shape[1] != v.shape[0]):
+                self.error()
+            else:
+                m_matrix = []
+                for row1, row2 in zip(self.data, v.data):
+                    row = []
+                    for e1, e2 in zip(row1, row2):
+
+
             
 
         
@@ -58,8 +88,8 @@ class Matrix:
 
 if __name__ == "__main__":
     matrix = Matrix([[3, 2], [2, 3]]);
-    m2 = Matrix();
-    m3 = 3
-    print(m2 + matrix)
+    m2 = Matrix((2, 2));
+    k = 2;
+    print(k / matrix)
     #matrix.printeo()
 
