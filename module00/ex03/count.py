@@ -37,5 +37,6 @@ if __name__ == "__main__":
         exit ()
     if (len(sys.argv) != 1):
         text_analyzer(sys.argv[1])
+    print(text_analyzer.__doc__)
 
 
