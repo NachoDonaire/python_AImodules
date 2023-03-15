@@ -9,11 +9,11 @@ if  __name__ == "__main__":
     if not (sys.argv[1].isdigit()):
         print("Please, an integer as argument, just one")
         exit()
-    if (int(sys.argv[1]) % 2 == 0):
+    if (int(sys.argv[1]) % 2 == 0 and int(sys.argv[1]) != 0):
         print("ODD")
     elif (int(sys.argv[1]) % 2 != 0):
         print("EVEN")
-    else:
+    elif (int(sys.argv[1]) == 0):
         print("ZERO")
     
 
