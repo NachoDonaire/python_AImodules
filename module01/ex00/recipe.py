@@ -8,6 +8,8 @@ class   Recipe:
         if type(cl) != int:
             print("type error")
             exit()
+        if (int(cl) > 5 or int(cl) < 1):
+            cl = "cooking level goes from 1 to 5"
         if type(ct) != datetime.datetime:
             print("type error")
         if (type(i) != list):

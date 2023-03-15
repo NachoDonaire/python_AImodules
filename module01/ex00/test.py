@@ -3,6 +3,7 @@ from recipe import Recipe
 import datetime
 
 if __name__ == "__main__":
+    print("Adding a cooking")
     name = "josias"
     cl = 1
     ct = datetime.datetime.now()
