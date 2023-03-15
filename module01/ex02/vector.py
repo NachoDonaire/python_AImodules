@@ -173,3 +173,6 @@ class   Vector:
         else:
             print("Quotient defined for vector and escalar, exclusively")
             return
+    def __str__(self):
+        text = "This class is about manage vector operations and storage vectors in general terms"
+        return (text)

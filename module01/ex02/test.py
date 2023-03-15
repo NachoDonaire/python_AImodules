@@ -2,7 +2,7 @@ from vector import Vector
 
 def printeito(v, n):
     print("\n--------------\n")
-    print("Valor de v" + str(n) + " : " + str(v))
+    print("Valor de v" + str(n) + " : " + str(v.values))
     print("Output" + str(v.__dict__))
     print("\n--------------\n")
 
@@ -21,6 +21,7 @@ if __name__ == "__main__":
     printeito(v4, 4)
 
 
+    print(str(v))
     dotander = v.dot(v3)
     print("Esto es el producto escalar  de v con v3, vectores columna: " + str(dotander))
 

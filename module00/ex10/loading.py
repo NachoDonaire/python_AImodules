@@ -8,8 +8,8 @@ def get_time(t):
 
 def ft_progress(lst):
     for e, i in zip(lst, range(len(lst))):
+        yield e
         taime = get_time(timedo.perf_counter())
-        i = i + 1
         pr_por = i * 100 / int(len(lst))
         por = i * 100 // int(len(lst))
         hora = time_sleep * float(len(lst)) - taime
@@ -17,7 +17,6 @@ def ft_progress(lst):
             hora = time_sleep * float(len(lst))
         s = "[" + '+' * (por // 5) + ' ' * int((100 - por) // 5) + "]"
         print(f"\rtiempo para nandear: {hora:.2f}s porcentaje para nandas: {pr_por:.2f}% barrita de nandeo: {s} esperado para nandear: {taime:.2f}", end='', flush = True)
-        yield e
 
         
 
