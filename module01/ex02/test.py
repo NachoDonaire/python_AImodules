@@ -19,6 +19,7 @@ if __name__ == "__main__":
 
     v4 = Vector([[3., 1., 4.]])
     printeito(v4, 4)
+    print(v4.__dict__)
 
 
     print(str(v))
