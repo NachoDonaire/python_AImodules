@@ -28,6 +28,14 @@ class Bank(object):
             return False
         if  suma % 2 == 0:
             return False
+        if new_account.id == None or new_account.name == None or new_account.value == None:
+            return False
+        if not type(new_account.name) == str:
+            return False
+        if not type(new_account.id) == int:
+            return False
+        if not type(new_account.id) == int or type(new_account.id) == float:
+            return False
         return True
 
 if  __name__ == "__main__":
