@@ -1,6 +1,7 @@
 class Account(object):
     ID_COUNT = 1
     def __init__(self, name, **kwargs):
+        print(kwargs)
         self.__dict__.update(kwargs)
         self.id = self.ID_COUNT 
         self.ooleo = 1
