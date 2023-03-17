@@ -2,8 +2,19 @@ import time
 from random import randint
 import os
 
+fd = open("machile.log", mode='w')
+
+def timeit
+
 def log(function):
-    print("zuka")
+    action = "eating as a p"
+    tucker = " " + str(action)
+    final_spaces = 20 - len(tucker)
+    complement_s = str(tucker) + str(" " * final_spaces)
+    time = 4
+    texetx = "[ exec-time = {:.3f} ms ]".format(time)
+    s = "(cmaxime)Running:" +  str(complement_s) + str(texetx)
+    fd.write("(cmaxime)Running:\n" )
     return function
 
 class CoffeeMachine():
